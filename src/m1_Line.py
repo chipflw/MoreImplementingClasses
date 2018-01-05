@@ -642,7 +642,7 @@ class Line(object):
           :rtype: bool
         """
         # --------------------------------------------------------------
-        # TODO: 12.
+        # DONE: 12.
         #   a. READ the above specification, including the Example.
         #        ** ASK QUESTIONS AS NEEDED. **
         #        ** Be sure you understand it, ESPECIALLY the Example.
@@ -677,6 +677,11 @@ class Line(object):
         # are different from each other.
         ################################################################
 
+        if round(self.slope(), 12) == round(line2.slope(), 12):
+            return True
+        else:
+            return False
+
     def reset(self):
         """
         What comes in:
@@ -707,7 +712,7 @@ class Line(object):
             print(line2)  # Should print: Line[(0, 1), (10, 20)]
         """
         # --------------------------------------------------------------
-        # TODO: 13.
+        # DONE: 13.
         #   a. READ the above specification, including the Example.
         #        ** ASK QUESTIONS AS NEEDED. **
         #        ** Be sure you understand it, ESPECIALLY the Example.
@@ -716,6 +721,8 @@ class Line(object):
         #        They include the Example in the above doc-string.
         # --------------------------------------------------------------
 
+        self.start = self.init_start
+        self.end = self.init_end
 
 ########################################################################
 # The TEST functions for the  Line  class begin here.
